@@ -1,0 +1,21 @@
+body{
+    margin: 50px;
+}
+
+.box{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    
+    transition-property: background-color, border-radius;
+    transition-duration: 2s, 1.5s;
+    /* transition-delay: 1s; */
+    transition-timing-function: cubic-bezier(.15,.89,.85,.26);
+    /* Rapido no começo, meio lento e final rápido */
+     /* (função de tempo, passar seres de pontos na curva da ação) */
+}
+
+.box:hover{
+    background-color: black;
+    border-radius: 50%;
+}
