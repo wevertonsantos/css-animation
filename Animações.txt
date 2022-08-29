@@ -1,0 +1,134 @@
+3 Tipos de animação
+
+Funcional: Otimiza a experiência, guia a atenção e Feedback
+Material: Modelos de UI, relações espacias entre tela e elementos
+Encantador: Humanidade & Diversão, algo único e memorável e entretenimento.
+
+--------------------------------------------------------
+
+Transições:
+
+Movimenta
+transform: translate(X,Y);
+transform: translateX(100px);
+transform: translateY(100px);
+
+Aumenta ou diminui
+transform: scaleX(2); // Duas vezes o tamanho só no eixo x
+transform: scaleY(2);
+transform: scale(x,y);
+
+Rotaciona
+
+transform: rotate(deg)
+transform: rotate(0.5turn)
+
+Inclinação
+
+transform: skew(-20deg);
+transform: skewX(deg);
+transform: skewY(deg);
+
+Juntando
+transform: translateX(100px) scale(1.5) rotate(-15deg);
+
+Transições
+
+transition-property: background-color, border-radius;
+transition-duration: 2s, 1.5s;
+(Passando duas propriedades e dois valores de duração)
+
+Transition-property:
+Permite escolher qual propriedade css vai passar pela transição
+
+background-color: red;
+
+transition-property: background-color;
+
+Transition-duration:
+Duração que irá acontecer
+
+transition-duration: 2s;
+
+Transition-delay:
+Delay ao acontecer a ação e quando a transição realmente vai começar
+
+transition-delay: 1s
+
+Transition-timing-function:
+
+
+transition-timing-function: ease-in; (suavizada no início)
+
+transition-timing-function: ease-out; (suavizada no fim da transição)
+
+transition-timing-function: ease-in-out; (misturado)
+
+transition-timing-function: cubic-bezier(); (função de tempo, passar seres de pontos na curva da ação)
+
+transition-timing-function: cubic-bezier(.15,.89,.85,.26);
+
+----------------------------------------------------------------
+
+KeyFrames:
+específica a animação propriamente dita
+
+Animação
+
+animation-name: fly; // nome da animação
+animation-duration: 2s; // duração
+
+animation-timing-function: ease-in, ease-out, ease-in-out; // função de tempo que será aplicada na animação
+
+animation-timing-function: cubic-bezier(0,0,0,0);
+
+animation-timing-function: steps(3); //passos ou frames;
+
+animation-timing-function: linear;
+
+animation-delay: 0.5; // quantidade de tempo de espera da aplicação do elemento até a animação começar efetivamente
+
+Define o número de vezes que essa animação vai ser reproduzida antes de parar
+animation-interation-count: 3;
+
+Direção da animação
+animation-direction: reverse, alternate, alternate-reverse
+
+// Define quais valores são aplicados antes ou depois da animação
+animation-fill-mode: forwards; // define que o último estado na animação deve ser mantido
+
+animation-fill-mode: backwards; // define que o estado inicial da animação
+
+animation-fill-mode: both; // acontece as duas coisas
+
+animation-play-state: running // esta acontecendo
+animation-play-state: pausede // está pausada
+
+animation (name, duration, timing-function, interation-count, direction)
+animation: fly 1.5 linear infinite alternate;
+
+@keyframes
+transform
+opacity
+
+@keyframes fly {
+
+	0%{
+	transform: translateX(0)
+	}
+
+	100%{
+	transform: translateX(calc(100vw - 200px));
+	}
+}
+
+@keyframes fly {
+
+	from{
+	transform: translateX(0)
+	}
+
+	to{
+	transform: translateX(calc(100vw - 200px));
+	}
+}
